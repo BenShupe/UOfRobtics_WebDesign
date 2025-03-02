@@ -1,0 +1,136 @@
+.about_cards {
+  padding: 4rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about__text-block {
+  width: 80%;
+  margin: 0 auto 2rem;
+  color: #666;
+  text-align: justify;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto 4rem;
+}
+
+.about__wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about__item {
+  position: relative;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* First card: Large and Center */
+.about__item--large-center {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+}
+
+/* Second card: Smaller and aligned to the right */
+.about__item--right {
+  width: 50%;
+  margin-left: auto;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+}
+
+/* Third card: Smallest and aligned to the left */
+.about__item--left {
+  width: 40%;
+  margin-right: auto;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+}
+
+.about__item__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.about__item__pic__wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+}
+
+.about__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+
+.about__item__img:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (min-width: 1024px) {
+  .about__item--large-center {
+    width: 60%;
+  }
+  .about__item--right {
+    width: 45%;
+  }
+  .about__item--left {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about__item--large-center,
+  .about__item--right,
+  .about__item--left {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.about__text-block--projects,
+.about__text-block--talks {
+  width: 80%;
+  margin: 1rem auto 2rem;
+  color: #666;
+  text-align: justify;
+}
+.about__wrapper {
+  position: relative; /* The wrapper will be the reference point for all the about items */
+  margin-top: 50px;   /* Adjust to add some spacing as needed */
+}
+
+.about__item {
+  position: absolute;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about__item:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover for a cool effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for better visual emphasis */
+}
